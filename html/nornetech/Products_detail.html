@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products_detail</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./static/css/iconfont.css">
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/swiper.min.js"></script>
+</head>
+<body>
+
+    <!-- in_position -->
+    <div class="in_position wrap">
+        <div class="container">
+            <a href="index.html">HOME</a>
+            <a href="#">products</a>
+        </div>
+    </div>
+
+    <div class="P_content wrap">
+        <div class="P_left_list">
+            <ul class="topnav">
+                <li><a href="#" class="tit">CATEGORIES<i class="iconfont icon-caidan"></i></a></li>
+                <li>
+                    <a href="#">Garments</a>
+                    <ul>
+                         <li><a href="#">New Released women's Tops</a></li>
+                         <li>
+                            <a href="#">High quality brand clothing</a>
+                            <ul>
+                                <li><a href="#">Jacket and Coat</a></li>
+                                <li><a href="#">Hoodie</a></li>
+                                <li><a href="#">Sweatshirt</a></li>
+                                <li><a href="#">T-shirt</a></li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#">Women's Fashion Top</a>
+                            <ul>
+                                <li><a href="#">Cardigan</a></li>
+                                <li><a href="#">T-Shirt</a></li>
+                                <li><a href="#">Tank</a></li>
+                                <li><a href="#">Dress</a></li>
+                                <li><a href="#">Sweatshirt</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                    <ul>
+                        <li class="active"><a href="#">Sneakers&Casual Shoes</a></li>
+                        <li><a href="#">Slippers</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Other Products</a>
+                    <ul>
+                        <li class="active"><a href="#">Insole</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Printing</a></li>
+            </ul>
+            <script src="./static/js/Multi-layer_fold.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $(".topnav").accordion({
+                        accordion:false,
+                        speed: 500,
+                        closedSign: '+',
+                        openedSign: '-'
+                    });
+                });
+            </script>
+
+
+            <div class="P_img_content">
+                <a href="#" class="contact"><img src="./static/images/ico_tongxun.svg" alt=""></a>
+                <h1>WHY CHOOSE US?</h1>
+                <p class="txt">You can contact us any way that is convenient for you.We are available 24/7 via email or telephone.</p>
+                <a href="#" class="pop_form">CONTACT US<i class="iconfont icon-youxiang1"></i></a>
+                <p class="txt1">NEW PRODUCTS</p>
+            </div>
+             <!-- shoes_swiper -->
+             <div class="p_partner_box">
+                <div class="p_partner">
+                    <div class="p_partner_list swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="img"><img src="./static/images/H_1.webp" alt=""></div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img"><img src="./static/images/p_1.webp" /></div>
+                            </li>
+                        </ul>				
+                    </div>
+                    <div class="pt-pagination"></div>
+                    <div class="pt-button-next"></div>
+                    <div class="pt-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ········The right column········· -->
+        <div class="PD_R_box">
+            <div class="PD_img_box">
+                <div class="left_img">
+
+                    <!-- 图片查看区 -->
+                    <div id="MagnifierWrap2">
+                        <div class="MagnifierMain">
+                            <img class="MagTargetImg" src="./static/images/H_1.webp" data-src="./static/images/H_1.webp"> 
+                        </div>
+                        <span class="spe_leftBtn"></span>
+                        <span class="spe_rightBtn"></span>
+                        <div class="spec-items"> 
+                            <ul>
+                                <li class="on"><img src="./static/images/H_1.webp" data-lsrc="./static/images/H_1.webp" data-maxSrc="./static/images/H_1.webp"></li>
+                                <li><img src="./static/images/P_1.webp" data-lsrc="./static/images/P_1.webp" data-maxSrc="./static/images/P_1.webp"></li>
+                                <li><img src="./static/images/H_1.webp" data-lsrc="./static/images/H_1.webp" data-maxSrc="./static/images/H_1.webp"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script src="static/js/magnifier.js"></script>
+
+                </div>
+                <div class="right_txt">
+                    <p class="line1">BW0506 NORNETEK Unisex Canvas Low Top Sneaker Non Slip Casual Shoes Canvas Shoes Loafers Lace up Fashion Men and Women Sneaker</p>
+                    <p class="shoe_txt">NO.: BW0506</p>
+                    <p class="shoe_txt">Brand: NORNETEK or OEM</p>
+                    <p class="shoe_txt">Material: 10oz Canvas+rubber</p>
+                    <p class="shoe_txt">Color: Gray</p>
+                    <p class="shoe_txt">Style: Sneakers, Casual shoes</p>
+                    <p class="shoe_txt">MOQ: 1000 pairs</p>
+                    <p class="shoe_txt">Other: Can be customized printing</p>
+                    <p class="line2">Category:<span>Sneakers&Casual Shoes</span></p>
+                    <p class="line3">Label: sneaker</p>
+                    <a href="#" class="pop_form">GET A FREE QUOTE</a>
+                </div>
+            </div>
+            
+            <!-- ···Product details···· -->
+            <h1>Describe</h1>
+            <div class="shoe_detail">
+                <h2>WHOLESALE FASHION CANVAS SNEAKERS</h2>
+                <p class="introduce">
+                    1. We are a professional canvas sneaker manufacturer, developing and producing products for big brands all the year round.
+                    2. Our raw materials are high-quality, healthy and environmentally friendly.
+                    3. We have a professional development team, We can develop all kinds of canvas shoes according to your needs.
+                    4. We have a professional quality inspection department to ensure the quality of products.
+                    5. We can make various prints and personalized designs on canvas sneakers.
+                </p>
+                <table></table>
+                <div class="img_list">
+                    <img src="./static/images/PD_1.webp" alt="">
+                </div>
+            </div>
+            <div class="more_shoe">
+                <h3>Related Products</h3>
+
+                <!-- more_shoes -->
+                <div class="PD_partner_box">
+                    <div class="PD_partner">
+                        <div class="PD_partner_list swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="img"><img src="./static/images/P_1.webp" alt=""></div>
+                                        <p class="tit">BW0506 NORNETEK Unisex Canvas Low Top Sneaker Non Slip Casual Shoes Canvas Shoes Loafers Lace up Fashion Men and Women Sneaker</p>
+                                        <div class="com_but PD_but">see more</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="img"><img src="./static/images/P_1.webp" alt=""></div>
+                                        <p class="tit">BW0506 NORNETEK Unisex Canvas Low Top Sneaker Non Slip Casual Shoes Canvas Shoes Loafers Lace up Fashion Men and Women Sneaker</p>
+                                        <div class="com_but PD_but">see more</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="img"><img src="./static/images/P_1.webp" alt=""></div>
+                                        <p class="tit">BW0506 NORNETEK Unisex Canvas Low Top Sneaker Non Slip Casual Shoes Canvas Shoes Loafers Lace up Fashion Men and Women Sneaker</p>
+                                        <div class="com_but PD_but">see more</div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <div class="img"><img src="./static/images/P_1.webp" alt=""></div>
+                                        <p class="tit">BW0506 NORNETEK Unisex Canvas Low Top Sneaker Non Slip Casual Shoes Canvas Shoes Loafers Lace up Fashion Men and Women Sneaker</p>
+                                        <div class="com_but PD_but">see more</div>
+                                    </a>
+                                </li>
+                            </ul>				
+                        </div>
+                        <div class="pt-pagination"></div>
+                        <div class="pt-button-next"></div>
+                        <div class="pt-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        //shoe_swiper
+        var pswiper = new Swiper('.p_partner_list', {
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.pt-button-next',
+            prevEl: '.pt-button-prev',
+        },
+        pagination: {
+            el: '.pt-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerGroup: 3
+            },
+            960: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerGroup: 6
+            },
+            1200: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1
+            }
+        }
+      });
+      //more_shoe_swiper
+      var pswiper = new Swiper('.PD_partner_list', {
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.pt-button-next',
+            prevEl: '.pt-button-prev',
+        },
+        pagination: {
+            el: '.pt-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            0: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            slidesPerGroup: 3
+            },
+            960: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            slidesPerGroup: 6
+            },
+            1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            slidesPerGroup: 1
+            }
+        }
+      });
+    </script>
+    <script src="./static/js/back.js"></script>
+</body>
+</html>

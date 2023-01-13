@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pringting</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./static/css/iconfont.css">
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/swiper.min.js"></script>
+</head>
+<body>
+    <div class="com_content1">
+        <img src="./static/images/prit_banner.webp" alt="">
+    </div>
+    <!-- in_position -->
+    <div class="in_position">
+        <div class="wrap container">
+            <a href="index.html">HOME</a>
+            <a href="#">about us</a>
+        </div>
+    </div>
+
+     <!-- A_content1 -->
+    <div class="com_tit1">PRINGTING</div>
+    <div class="com_tit2">PRINGTING <strong></strong></div>
+    <div class="com_line1"></div>
+    <div class="com_line2"></div>
+    <p class="introduct_txt wrap">
+        The printing industry is one of the important industries of Nornetech, it improves the competitiveness of our products. Intelligence and automation are the characteristics of our printing, we have provided printing products and services for many international famous brands for many years. We have screen printing lines, digital printing, sublimation transfer printing, hot and cold transfer film printing, elliptical printing machine and other printing production lines and equipment. Printing effects include reflection, bronzing, foaming, multi-color, luminous and so on. We have the most advanced equipment and technology in printing and we are constantly updating with the changes of the market and customers’ needs.
+    </p>
+    <div class="videoBox wrap">
+        <video class="cl9oefmVid video boxSiz" poster="//hkimg.bjyyb.net/sites/67000/67265/20211125154707569.png@!w800" controls=""><source src="https://vd.bjyyb.net/pt/43000/43230/v/6212f565f03ac_1920.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="print_tit">EQUIPMENT & TECHNOLOGY</div>
+    <div class="com_line1"></div>
+    <div class="com_line2"></div>
+
+    <!-- equipement swiper -->
+    <div class="print_partner wrap">
+        <div class="print_partner_list swiper-container">
+            <ul class="swiper-wrapper" id="print1_list">
+                <li class="swiper-slide">
+                    <div class="img"><img src="./static/images/swiper/print1.1.webp" alt=""></div>
+                    <p>Screen printing line</p>
+                </li>
+                <li class="swiper-slide">
+                    <div class="img"><img src="./static/images/swiper/prit1.webp" alt=""></div>
+                    <p>Screen printing line</p>
+                </li>
+                <li class="swiper-slide">
+                    <div class="img"><img src="./static/images/swiper/print1.1.webp" alt=""></div>
+                    <p>Screen printing line</p>
+                </li>
+            </ul>				
+        </div>
+        <div class="pt-pagination"></div>
+        <div class="pt-button-next"></div>
+        <div class="pt-button-prev"></div>
+    </div>
+
+    <div class="print_tit">PRINTING EFFECTS</div>
+    <div class="com_line1"></div>
+    <div class="com_line2"></div>
+
+    <!-- effect swiper -->
+    <div class="print2_partner wrap">
+        <div class="print2_partner_list swiper-container">
+            <ul class="swiper-wrapper" id="print2_list">
+                <li class="swiper-slide">
+                    <div class="img"><img src="./static/images/swiper/print2.webp" alt=""></div>
+                    <p>Transfer printing on PU</p>
+                </li>
+                <li class="swiper-slide">
+                    <div class="img"><img src="./static/images/swiper/print2.1.webp" alt=""></div>
+                    <p>Transfer printing on PU</p>
+                </li>
+            </ul>				
+        </div>
+        <div class="pt-pagination"></div>
+        <div class="pt-button-next"></div>
+        <div class="pt-button-prev"></div>
+    </div>
+
+    <a href="/" class="com_but print_but">see more</a>
+    
+
+    <link href="./static/css/viewer.min.css" rel="stylesheet" type="text/css" />
+    <script src="./static/js/viewer.min.js"></script>
+
+    <script>
+        //查看大图
+        var image = new Viewer(document.getElementById('print1_list'), {
+            button: true,
+            navbar: false,
+            width: 800,
+            title: true
+        });
+        var image = new Viewer(document.getElementById('print2_list'), {
+            button: true,
+            navbar: false,
+            width: 800,
+            title: true
+        });
+        // equipement swiper
+        var p1swiper = new Swiper('.print_partner_list', {
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.pt-button-next',
+                prevEl: '.pt-button-prev',
+            },
+            pagination: {
+                el: '.pt-pagination',
+                clickable: true,
+            },
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            // },
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+                0: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesPerGroup: 3
+                },
+                960: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesPerGroup: 6
+                },
+                1200: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesPerGroup: 1
+                }
+            }
+        });
+        // equipement swiper
+        var p1swiper = new Swiper('.print2_partner_list', {
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.pt-button-next',
+                prevEl: '.pt-button-prev',
+            },
+            pagination: {
+                el: '.pt-pagination',
+                clickable: true,
+            },
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            // },
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+                0: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesPerGroup: 3
+                },
+                960: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesPerGroup: 6
+                },
+                1200: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                slidesPerGroup: 1
+                }
+            }
+        });
+    </script>
+    <script src="./static/js/main.js"></script>
+</body>
+</html>

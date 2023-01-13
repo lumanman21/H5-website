@@ -1,0 +1,74 @@
+/* 折叠面板 */
+.fold_nav {
+  width: 100%;
+  max-width: 350px;
+  margin: 30px auto 20px;
+}
+.fold_nav li {
+  margin-bottom: 1px;
+  position: relative;
+}
+.fold_nav li > a {
+  display: block;
+  padding-left: 10px;
+  padding-right: 30px;
+  font-size: 16px;
+  color: #444;
+  background: rgba(255, 255, 255, 1);
+  line-height: 46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.open > a {
+  background: #014190 !important;
+  color: #fff !important;
+}
+.fold_nav .switch {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 2;
+}
+.fold_nav .switch:before {
+  content: "+";
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 20px;
+}
+.open .switch:before {
+  content: "-";
+}
+
+.submenu {
+  display: none;
+  background: rgba(255, 255, 255, 0.4);
+}
+.submenu dt {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.submenu dt:last-child {
+  border-bottom: none;
+}
+.submenu dt a {
+  display: block;
+  padding-left: 30px;
+  font-size: 13px;
+  color: #666;
+  line-height: 40px;
+  border: 1px solid #eee;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.submenu dt a:hover {
+  /* background: rgba(0, 0, 0, 0.05); */
+  border: 1px solid #014190;
+}
