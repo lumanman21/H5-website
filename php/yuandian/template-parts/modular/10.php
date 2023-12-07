@@ -1,1 +1,0 @@
-<?php echo $id['modular_10_content'];?>

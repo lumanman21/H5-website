@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js?22"></script>
+</head>
+<body>
+    <!-- 鹿 deer -->
+    <div id="P028">
+        <img src="https://img.bjyyb.net/sites/71000/71332/20220812180301614.png" alt="" class="">
+        <div id="bottom_token">
+            <img src="https://img.bjyyb.net/sites/71000/71332/20220816171621965.png" alt="" class="">
+        </div>
+        <div id="blackimg">
+            <div id="light">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let P028_width = $('#P028').width();
+        let P028_height = $('#P028').height();
+        let P028_VX = P028_width / 2;
+        let P028_VY = P028_height;
+
+        // 设置遮罩的高度和外面的盒子一样大
+        $('#blackimg').css('height', P028_height + 'px');
+
+
+        // $(window).resize(function (){
+        //     P028_init();
+        // });
+
+        // setTimeout(()=>{
+        //     P028_init();
+        // },500);
+     
+
+        function P028_Action(X,Y){
+            let opposite = P028_VY - Y;
+            let hypotenuse = 0;
+            let adjacent = 0;
+            P028_VX > X ? adjacent = P028_VX - X : adjacent = X - P028_VX;
+            hypotenuse = Math.sqrt(opposite ** 2 + (adjacent) ** 2);
+            let sinOfAngleX = opposite / hypotenuse;
+            let deg = Math.asin(sinOfAngleX) * 180 / Math.PI;
+            P028_VX > X ? deg = deg : deg = 180 - deg;
+
+            $('#bottom_token').css('transform', 'translateX(-50%) translateY(50%) rotate(' + deg + 'deg)');
+            $('#light').css('transform', 'translateX(-50%) translateY(50%) rotate(' + (deg - 67.5) + 'deg)').css('height', (hypotenuse * 2) + 'px').css('width', (hypotenuse * 2) + 'px').css('clip-path', 'polygon(0% 0%, ' + (hypotenuse) + 'px 0, ' + (hypotenuse) + 'px ' + (hypotenuse) + 'px, 0 0)');
+        };
+
+
+
+        function P028_RotateVision(event) {
+            let X = event.clientX - $('#P028').offset().left;
+            let Y = event.clientY - ($('#P028').offset().top-$(document).scrollTop());
+            P028_Action(X,Y);
+        };
+
+
+
+
+        $('#P028').mousemove(function (event) {
+            P028_RotateVision(event);
+        })
+
+        // $('#light').fadeOut();
+
+        
+
+
+
+        $('#P028').mouseenter(function () {
+            // $('#light').fadeIn()
+            $('#light').css('animation', 'unset');
+            $('#bottom_token').css('animation', 'unset');
+        })
+
+        $('#P028').mouseleave(function () {
+            $('#light').css("animation","4s linear 0s infinite alternate none running lightRotate");
+            $('#bottom_token').css('animation', '4s linear 0s infinite alternate none running visionRotate');
+
+            //鼠标一走光束保持不变
+            $('#light').css("transform","translateX(-50%) translateY(50%) rotate(112.348deg)");
+            $('#light').css("height","1504.01px");
+            $('#light').css("width","1504.01px");
+            $('#light').css("clip-path","polygon(0% 0%, 752.003px 0px, 752.003px 752.003px, 0px 0px)");
+        });
+   </script>
+</body>
+</html>

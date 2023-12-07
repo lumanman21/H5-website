@@ -1,0 +1,93 @@
+.aa{
+	/* 
+	yellow, red 10%,黄红渐变区间（0-10%) 
+	red 10%,green 50% 红绿渐变区间（10%-50%）
+	*/
+	background-image: -webkit-linear-gradient(0deg, yellow, red 10%,green 10%);
+	/* 用文本占据的空间裁切盒子背景 */
+	-webkit-background-clip: text;
+	/* 文本颜色设置透明，将空间背景色显示 */
+	color: transparent;
+    font-weight: bold;
+}
+
+
+.title{color: #333;line-height: 100%;}
+.title span{line-height: 200%;
+	background: linear-gradient(to right,red,blue,green) no-repeat right bottom;
+	background-size: 0px 4px;
+	transition: background-size 1300ms;
+}
+.title span:hover{
+	background-position-x: left;
+	background-size: 100% 4px;
+}
+
+
+.icon1{
+	/* 填充颜色 */
+	fill:none;
+	/* 图形原色的外轮廓颜色 */
+	stroke: red;
+	/* 图形原色外轮廓的宽度 */
+	stroke-width: 5px;
+	/* 两端的形状 */
+	stroke-linecap: round;
+}
+@keyframes move{
+	/* 指定线条长度和间距 */
+	0%{
+		stroke-dasharray: 0 600px;
+	}
+	100%{
+		stroke-dasharray: 600px 0;
+	}
+}
+.icon:hover{
+	animation:move 1s linear;
+}
+
+
+.font_1 i{font-size: 30px;font-weight: bold}
+
+/*  */
+.arrow {
+	width: 100px;height: 100px;
+	transform: rotate(90deg);
+	cursor: pointer;
+  }
+  
+  .arrow span {
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-bottom: 5px solid red;
+	border-right: 5px solid red;
+	transform: rotate(45deg);
+	margin: -15px;
+	animation: animate28797 2s infinite;
+  }
+  
+  .arrow span:nth-child(2) {
+	animation-delay: -0.2s;
+  }
+  
+  .arrow span:nth-child(3) {
+	animation-delay: -0.4s;
+  }
+  
+  @keyframes animate28797 {
+	0% {
+	  opacity: 0;
+	  transform: rotate(45deg) translate(-20px, -20px);
+	}
+  
+	50% {
+	  opacity: 1;
+	}
+  
+	100% {
+	  opacity: 0;
+	  transform: rotate(45deg) translate(20px, 20px);
+	}
+  }

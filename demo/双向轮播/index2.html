@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/swiper-bundle.min.css" />
+    <script src="./js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="b2b_box">
+      <div class="swiper-container gallery_top">
+        <ul class="swiper-wrapper b2b_info_list">
+          <li class="swiper-slide">
+            <div class="img">
+              <img src="./img/b1.png" />
+            </div>
+            <section>
+              <h6>安徽元琛环保科技股份有限公司</h6>
+              <p>专注于环保领域技术研发及应用，在工业烟气除尘、脱硝、循环经济、智慧环保等领域开拓创新；致力于行业技术前沿，促进环保行业新业态融合，是一家同时具备高效除尘过滤材料和SCR脱硝催化剂研发、设计、生产以及废旧催化剂回收和再生资质的企业，具有CNAS和...</p>
+            </section>
+          </li>
+          <li class="swiper-slide">
+            <div class="img">
+              <img src="./img/b2.png" />
+            </div>
+            <section>
+              <h6>安徽安粮控股股份有限公司</h6>
+              <p>安徽安粮控股股份有限公司成立于2010年，是经安徽省国资委批准，由1976年成立的安徽省粮油食品进出口（集团）公司改制设立的大型国有企业集团。公司注册资金人民币7.5亿元，住...</p>
+            </section>
+          </li>
+          <li class="swiper-slide">
+            <div class="img">
+              <img src="./img/b3.png" />
+            </div>
+            <section>
+              <h6>洽洽食品股份有限公司</h6>
+              <p>洽洽食品股份有限公司坚持以“质造美味坚果，分享快乐时刻”为使命，营销网络健全，产品不仅畅销全国各省市，更远销至东南亚、欧美等近50个国家和地区。</p>
+            </section>
+          </li>
+          <li class="swiper-slide">
+            <div class="img">
+              <img src="./img/b4.png" />
+            </div>
+            <section>
+              <h6>捷途-奇瑞汽车旗下品牌</h6>
+              <p>JETOUR捷途，为当下年轻人制造彰显个性的生活好车，与年轻人一起，用行动定义旅途。</p>
+            </section>
+          </li>
+          <li class="swiper-slide">
+            <div class="img">
+              <img src="./img/b5.png" />
+            </div>
+            <section>
+              <h6>安徽江淮汽车集团有限公司</h6>
+              <p>安徽江淮汽车集团有限公司成立于1964年，是一家综合性汽车制造商，涵盖商用车、乘用车和动力传动系的研发、制造、销售和服务。江淮汽车是一家“集先进节能汽车、新能源汽车和智能网联汽车于一体的综合性汽车制造商”。</p>
+            </section>
+          </li>
+        </ul>
+      </div>
+
+      <div class="swiper-container gallery_thumbs">
+        <ul class="swiper-wrapper b2b_list">
+          <li class="swiper-slide">
+            <img src="./img/s1.png" alt="" />
+          </li>
+          <li class="swiper-slide">
+            <img src="./img/s2.png" alt="" />
+          </li>
+          <li class="swiper-slide">
+            <img src="./img/s3.png" alt="" />
+          </li>
+          <li class="swiper-slide">
+            <img src="./img/s4.png" alt="" />
+          </li>
+          <li class="swiper-slide">
+              <img src="./img/s5.png" alt="" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="b2b-button-prev"></div>
+      <div class="b2b-button-next"></div>
+
+
+      <script>
+        var galleryThumbs = new Swiper(".gallery_thumbs", {
+          spaceBetween: 0,
+          slidesPerGroup: 1,
+          freeMode: false,
+        //   centeredSlides: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+          breakpoints: {
+            0: {
+              slidesPerView: 3,
+            },
+
+            1025: {
+              slidesPerView: 5,
+            },
+          },
+        });
+        var galleryTop = new Swiper(".gallery_top", {
+          spaceBetween: 10,
+          thumbs: {
+            swiper: galleryThumbs,
+          },
+          navigation: {
+            nextEl: ".b2b-button-next",
+            prevEl: ".b2b-button-prev",
+          },
+        });
+      </script>
+    </div>
+  </body>
+</html>

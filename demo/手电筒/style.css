@@ -1,0 +1,87 @@
+
+  #P028 {
+	width: 100%;
+	height: fit-content;
+	background-color: black;
+	position: relative;
+	/* cursor: none; */
+  }
+  #P028 > img {
+	width: 100%;
+  }
+  #bottom_token {
+	height: 64px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	z-index: 999;
+	transform: translateX(-50%) translateY(50%);
+	animation: 4s linear 0s infinite alternate none running visionRotate;
+  } 
+  
+  /* @media (max-width: 960px) {
+	#P028 #bottom_token {
+	height: 48px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	z-index: 999;
+	transform: translateX(-50%) translateY(50%);
+	animation: visionRotate2 2s  infinite alternate;
+  }
+} */
+
+  
+#bottom_token > img {
+	height: 100%;
+  }
+#blackimg {
+	width: 100%;
+	height: 800px;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	mix-blend-mode: darken;
+	background: url("https://img.bjyyb.net/sites/71000/71332/20220816143129771.png") no-repeat;
+	background-size: 100% 100%;
+  }
+#light {
+	width: 1500px;
+	height: 1500px;
+	background: white;
+	border-radius: 100%;
+	position: absolute;
+	overflow: hidden;
+	z-index: 998;
+	bottom: 0;
+	left: 50%;
+	clip-path: polygon(0% 0%, 750px 0,750px 750px, 0 0);
+	transform: translateX(-50%) translateY(50%) rotate(-67.5deg);
+	background: radial-gradient(circle, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
+	animation: 4s linear 0s infinite alternate none running lightRotate;
+  }
+
+  @keyframes visionRotate {
+	from {
+	  transform: translateX(-50%) translateY(50%) rotate(10deg);
+	}
+	to {
+	  transform: translateX(-50%) translateY(50%) rotate(170deg);
+	}
+  }
+  @keyframes lightRotate {
+	0% {
+	  transform: translateX(-50%) translateY(50%) rotate(-57.5deg);
+	}
+
+	100% {
+	  transform: translateX(-50%) translateY(50%) rotate(102.5deg);
+	}
+}
+#P028:hover #light{animation: unset;}
+#P028:hover #bottom_token{animation: unset;}
+#light img {
+	width: 100%;
+	z-index: 998;
+  }

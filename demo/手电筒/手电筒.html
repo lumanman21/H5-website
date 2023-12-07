@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .wrap {
+        margin-top: 50px;
+        width: 100%;
+        height: fit-content;
+        background-color: black;
+        position: relative;
+        /* cursor: none; */
+      }
+      .wrap img {
+        width: 100%;
+        border: 0;
+      }
+      .bottom_token {
+        height: 64px;
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 999;
+        background-color: rgb(200, 55, 55);
+        animation: 2s linear 0s infinite alternate none running visionRotate;
+        transform: translateX(-50%) translateY(50%) rotate(151.431deg);
+      }
+      .blackimg {
+        width: 100%;
+        /* height: fit-content; */
+        /* ==============*/
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        mix-blend-mode: darken;
+        background: url(https://img.bjyyb.net/sites/71000/71332/20220816143129771.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .light {
+        border-radius: 100%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 998;
+        bottom: 0;
+        left: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
+        /* display: none; */
+        /* 改变rotate */
+        transform: translateX(-50%) translateY(50%) rotate(0.6932deg);
+        height: 1330.34px;
+        width: 1330.34px;
+        /* polygon随着width和height一起变 */
+        /* x1 y1,x2 y2,...,xn yn */
+        clip-path: polygon(0% 0%, 665.168px 0px, 665.168px 665.168px, 0px 0px);
+        animation: 2s linear 0s infinite alternate none running lightRotate;
+      }
+      @keyframes visionRotate {
+        0% {
+          transform: translateX(-50%) translateY(50%) rotate(45deg);
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(50%) rotate(135deg);
+        }
+      }
+      @keyframes lightRotate {
+        0% {
+          transform: translateX(-50%) translateY(50%) rotate(-22deg);
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(50%) rotate(68deg);
+        }
+      }
+      .wrap:hover .light {
+        animation: unset;
+      }
+      .wrap:hover .bottom_token {
+        animation: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="circle"></div> -->
+    <div class="wrap">
+      <img src="https://img.bjyyb.net/sites/71000/71332/20220812180301614.png" alt="" />
+      <!-- 下面的灯 -->
+      <div class="bottom_token">灯</div>
+      <!-- 遮罩图片 -->
+      <div class="blackimg">
+        <!-- 光 -->
+        <div class="light"></div>
+      </div>
+    </div>
+
+    <script>
+      const getAngle = (x, y) => {
+        var radian = Math.atan(y / x)
+        var angle = Math.floor(180 / (Math.PI / radian))
+        if (x < 0) {
+          angle += 180
+        }
+        // console.log(180 - angle)
+        return 180 - angle
+      }
+      const wrap = document.querySelector(".wrap")
+      const bottom_token = document.querySelector(".bottom_token")
+      const light = document.querySelector(".light")
+
+      wrap.addEventListener("mousemove", function (e) {
+        // console.log(e.pageY) //鼠标距离文档顶部
+        // console.log(wrap.getBoundingClientRect().top) //wrap距离文档顶部
+        //鼠标到元素左上角
+        let x = e.pageX - wrap.getBoundingClientRect().left
+        let y = e.pageY - wrap.getBoundingClientRect().top
+        //手电筒的位置到元素左上角
+        let bx = wrap.getBoundingClientRect().width / 2
+        let by = wrap.getBoundingClientRect().height
+
+        //设置手电筒角度
+        let X = x - bx
+        let Y = by - y
+        bottom_token.setAttribute(
+          "style",
+          `transform:translateX(-50%) translateY(50%) rotate(${getAngle(X, Y)}deg);`
+        )
+
+        dx = Math.abs(x - bx)
+        dy = Math.abs(y - by)
+        //计算光的宽高
+        var res = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
+        // console.log(res)
+        //设置光的宽高，形状，以及旋转角度
+        light.setAttribute(
+          "style",
+          `width: ${res * 2}px;height: ${
+            res * 2
+          }px;clip-path: polygon(0% 0%, ${res}px 0px, ${res}px ${res}px, 0px 0px);transform: translateX(-50%) translateY(50%) rotate(${
+            getAngle(X, Y) - 67
+          }deg);`
+        )
+      })
+      wrap.addEventListener("mouseleave", function () {
+        // light.style.display = "none"
+        bottom_token.setAttribute(
+          "style",
+          `animation:2s linear 0s infinite alternate none running visionRotate;`
+        )
+        light.setAttribute(
+          "style",
+          `animation:2s linear 0s infinite alternate none running lightRotate;`
+        )
+      })
+      wrap.addEventListener("mouseenter", function () {
+        bottom_token.setAttribute("style", `animation:unset;`)
+        light.setAttribute("style", `animation:unset;`)
+        // light.style.display = "block"
+      })
+    </script>
+  </body>
+</html>

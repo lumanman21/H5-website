@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/swiper-bundle.min.js">
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- Demo styles -->
+
+  </head>
+
+  <body>
+    <!-- Swiper -->
+
+    <div
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper mySwiper2"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/未标题-1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/奇瑞.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/元琛科技-1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/元琛科技-1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/元琛科技-1.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/元琛科技-1.png" />
+        </div>
+        
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/江淮.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/carefree.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/vina.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/carefree.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="img/carefree.png" alt="">
+        </div><div class="swiper-slide">
+          <img src="img/carefree.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../package/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
+  </body>
+</html>
