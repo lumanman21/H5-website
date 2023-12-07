@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.i_explore{}
+
+.explore_cont{display:-webkit-flex; display:flex; flex-wrap:wrap;align-items: center;}
+
+.explore_img{
+	width: 42%;
+	height: 5.6rem;
+	-webkit-border-radius:.2rem; border-radius:.2rem;overflow: hidden;
+	position: relative;
+}
+.explore_img dt{
+	opacity: 0;
+	position: absolute;
+	top: 0;left: 0;width: 100%;height: 100%;
+	z-index: 1;
+	-webkit-transition:all .5s ease; transition:all .5s ease;
+}
+.explore_img dt.curr{opacity: 1;z-index: 3;animation: InRight .5s forwards;}
+.explore_img a{display: block;height: 100%}
+.explore_img img{position: relative; width: 100%;height: 100%;object-fit: cover;}
+@keyframes InRight {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.explpre_list{
+	margin-left: auto;
+	width: 52%;
+}
+.explpre_list li{
+	padding: .46rem 0;
+	box-sizing: border-box;
+	border-bottom: 1px solid var(--border_color);
+	display:-webkit-flex; display:flex; flex-wrap:nowrap;cursor: pointer;
+}
+.explpre_list li:first-child{border-top: 1px solid var(--border_color);}
+.explpre_list .num{flex-shrink: 0;font-size: 0.2rem;}
+.explore_t{width: 100%;margin-left: 0.4rem;}
+.explore_t p{margin-bottom: 0.18rem; font-size: 0.2rem;overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.explore_t span{display: none;}
+.explore_t i{display: block;margin-bottom: 0.1rem;font-size: 0.15rem; color: #666;}
+.explore_t h6{margin-bottom: 0.26rem;font-size: 0.15rem;color: #666;overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;}
+
+.explpre_list li.active .num,.explpre_list li.active p{color: var(--i_color);}
+
+@media screen and (max-width:1200px) {
+	.explore_img{height: 5rem;}
+	.explpre_list li{padding: .3rem 0;}
+}
+@media screen and (max-width:1024px) {
+	.explore_img{display: none;}
+	.explpre_list{width: 100%;}
+	.explpre_list li{padding: 0.2rem 0;}
+	.explpre_list span{display: block !important;}
+	.explore_t{margin-left: 0.2rem;}
+	.explpre_list .num,.explore_t p{font-size: 0.18rem;}
+	.explore_t i{font-size: 0.14rem;}
+	.explore_t h6{
+		margin-bottom: 0.2rem;
+		font-size: 0.14rem;
+	}
+}
+@media screen and (max-width:768px) {
+	.explpre_list .num,.explore_t p{font-size: 0.17rem;}
+}
+@media screen and (max-width:560px) {
+	.explpre_list .num,.explore_t p{font-size: 0.16rem;}
+	.explore_t p{margin-bottom: 0.14rem;}
+}

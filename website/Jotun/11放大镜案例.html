@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <script type="text/javascript" src="jquery-3.5.1.min.js"></script> -->
+		<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+		<script src="static/js/jquery.min.js"></script>
+
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 400px;
+				height: 400px;
+				position: relative;
+			}
+
+			.box img {
+				width: 400px;
+				height: 400px;
+			}
+
+			.box .opa {
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				opacity: .2;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			.bbox {
+				width: 400px;
+				height: 400px;
+				display: none;
+				overflow: hidden;
+			}
+
+			.bbox img {
+				width:800px;
+				height:800px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="static/images/other/p1.jpg">
+			<div class="opa"></div>
+		</div>
+		<div class="bbox">
+			<img src="static/images/other/p1.jpg">
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('.box').mouseenter(function() {
+					$('.box .opa').show()
+					$('.bbox').show().offset({
+						left: $(this).offset().left + 400 + 10,
+						top: $(this).offset().top
+					})
+					$(this).mousemove(function(e) {
+						//鼠标在小图上的位置
+						var mleft = e.pageX - $('.box').offset().left
+						var mtop = e.pageY - $('.box').offset().top
+						//在小图上移动时，,最大最小值不溢出小图框
+						var l=Math.min(Math.max(mleft-100,0),200)
+						var t=Math.min(Math.max(mtop-100,0),200)
+						$('.bbox').scrollLeft(l*2).scrollTop(t*2)//放大
+						$('.box .opa').css('left',l+'px').css('top',t+'px')//小方块跟随鼠标移动
+					})
+				}).mouseleave(function() {
+					$('.bbox').hide()
+					$('.box .opa').hide()
+				})
+			})
+		</script>
+	</body>
+</html>

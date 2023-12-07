@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* Products List */
+
+.cat_des{padding: 0 16%;text-align: center;}
+
+@media screen and (max-width:1366px) {
+	.cat_des{padding: 0 10%;}
+}
+@media screen and (max-width:1024px) {
+	.cat_des{padding: 0 0;}
+}
