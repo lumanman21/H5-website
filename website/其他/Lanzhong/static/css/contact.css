@@ -1,0 +1,452 @@
+/* ------------------ Contact us ------------------ */
+
+.contact {}
+
+.c_cont {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.c_map {
+	width: 50%;
+	height: 100%;
+	position: relative;
+	overflow: hidden
+}
+.c_map::before {
+	content: "";
+	display: block;
+	padding-bottom: 80%
+}
+.c_map iframe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+
+
+.c_info {
+	margin-left: auto;
+	width: 45%;
+}
+.c_info>h4 {
+	margin-bottom: 0.5rem;
+	font-size: 0.22rem;
+	color: #222;
+	font-weight: bold;
+}
+
+.c_contact {}
+.c_contact dt {
+	margin-bottom: 0.36rem;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.c_contact .ico {
+	width: .5rem;
+	height: .5rem;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	position: relative;
+}
+.c_contact .ico::before,
+.c_contact .ico::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	opacity: 0;
+}
+.c_contact .ico i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 0.28rem;
+	color: #888;
+}
+.c_contact span {
+	margin-left: auto;
+	width: calc(100% - .5rem - .24rem);
+}
+.c_contact b {
+	font-size: 0.16rem;
+	color: #999;
+}
+.c_contact a,
+.c_contact p {
+	margin-top: 0.1rem;
+	display: block;
+	font-size: 0.18rem;
+	color: #222;
+}
+
+.c_contact dt:hover .ico::before,
+.c_contact dt:hover .ico::before,
+.c_contact dd:hover .ico::before,
+.c_contact dd:hover .ico::before {
+	animation: c_contact_ico1 1.5s 0s ease infinite;
+}
+.c_contact dt:hover .ico::after,
+.c_contact dt:hover .ico::after,
+.c_contact dd:hover .ico::after,
+.c_contact dd:hover .ico::after {
+	animation: c_contact_ico2 1.5s 0s ease infinite;
+}
+@keyframes c_contact_ico1 {
+	0% {
+		opacity: 0
+	}
+	5% {
+		opacity: 1
+	}
+	80% {
+		opacity: 0
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5)
+	}
+}
+@keyframes c_contact_ico2 {
+	0% {
+		opacity: 0
+	}
+	5% {
+		opacity: 1
+	}
+	80% {
+		opacity: 0
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2);
+		-ms-transform: scale(2);
+		-o-transform: scale(2);
+		-webkit-transform: scale(2);
+		-moz-transform: scale(2)
+	}
+}
+.c_contact dt:hover img,
+.c_contact dd:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0)
+}
+.c_contact a:hover,
+.c_contact p:hover {
+	color: var(--i_color);
+}
+
+@media screen and (max-width:1440px) {}
+@media screen and (max-width:1366px) {
+	.c_info>h4 {
+		font-size: 0.2rem;
+	}
+	.c_contact a,
+	.c_contact p {
+		font-size: 0.17rem;
+	}
+}
+@media screen and (max-width:1200px) {}
+@media screen and (max-width:1024px) {
+	.c_info {
+		order: -1;
+		width: 100%;
+	}
+	.c_info>h4 {
+		margin-bottom: 0.36rem;
+		font-size: 0.18rem;
+	}
+	.c_contact dt {
+		margin-bottom: 0.3rem;
+	}
+	.c_contact a,
+	.c_contact p {
+		font-size: 0.16rem;
+	}
+
+	.c_map {
+		width: 70%;
+		margin-top: 0.3rem;
+	}
+}
+@media screen and (max-width:768px) {}
+@media screen and (max-width:560px) {
+	.c_info>h4 {
+		font-size: 0.17rem;
+	}
+
+	.c_contact dt {
+		margin-bottom: 0.2rem;
+	}
+	.c_contact .ico {
+		width: 0.44rem;
+		height: 0.44rem;
+	}
+	.c_contact .ico i {
+		font-size: 0.24rem;
+	}
+	.c_contact span {
+		width: calc(100% - 0.4rem - .24rem);
+	}
+	.c_contact b {
+		font-size: 0.15rem;
+	}
+	.c_contact a,
+	.c_contact p {
+		font-size: 0.15rem;
+	}
+
+	.c_map {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+.c_form {}
+.c_form .wrap {
+	box-sizing: border-box;
+	padding: 0 6%;
+}
+
+.c_form .tit {
+	margin-bottom: 0.3rem;
+	font-size: 0.3rem;
+	color: #222;
+}
+
+#wpforms-390 {
+	--input_font_size: 15px;
+	--input_height: .44rem
+}
+#wpforms-form-390 {
+	width: 100%;
+	position: relative;
+	overflow: hidden
+}
+
+#wpforms-390 input,
+#wpforms-390 button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none
+}
+#wpforms-390 .wpforms-field {
+	padding: 0;
+	margin: 0
+}
+#wpforms-390 .wpforms-field-label {
+	display: block;
+	margin-bottom: 0.1rem;
+	font-size: 0.18rem;
+}
+#wpforms-390 .wpforms-required-label {
+	font-size: .16rem;
+	color: #F00
+}
+#wpforms-390 .wpforms-field {
+	width: 100%;
+	background: transparent;
+	padding-bottom: .3rem;
+	position: relative;
+	overflow: hidden
+}
+
+#wpforms-390 .wpforms-field-container input,
+#wpforms-390 select,
+#wpforms-390 textarea {
+	width: 100%;
+	max-width: 100% !important;
+	min-width: 100%;
+	font-size: var(--input_font_size);
+	color: #333;
+	height: var(--input_height);
+	box-sizing: border-box;
+	border: 1px solid #CCC;
+	background: none;
+	padding: 0 .16rem;
+	overflow: hidden;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease
+}
+#wpforms-390 .wpforms-field-container input:hover,
+#wpforms-390 select:hover,
+#wpforms-390 textarea:hover {
+	border-color: var(--i_color);
+}
+#wpforms-390 input {
+	line-height: var(--input_height);
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+}
+#wpforms-390 select {
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+}
+#wpforms-390 textarea {
+	line-height: .22rem;
+	min-height: 1.6rem;
+	padding: .06rem .16rem;
+	-webkit-border-radius: .3rem;
+	border-radius: .3rem;
+}
+
+
+#wpforms-390 select {
+	outline: none;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url(../images/public/arrow_down_hollow_hei.svg) no-repeat center;
+	background-size: .18rem;
+	background-position-x: calc(100% - .1rem);
+}
+#wpforms-390 option {
+	font-size: var(--input_font_size);
+}
+
+
+#wpforms-390 input::-webkit-input-placeholder,
+#wpforms-390 textarea::-webkit-input-placeholder {
+	color: rgb(0 0 0 / 40%);
+	font-size: var(--input_font_size)
+}
+#wpforms-390 input::-moz-placeholder,
+#wpforms-390 textarea::-moz-placeholder {
+	color: rgb(0 0 0 / 40%);
+	font-size: var(--input_font_size)
+}
+#wpforms-390 input::-ms-input-placeholder,
+#wpforms-390 textarea::-ms-input-placeholder {
+	color: rgb(0 0 0 / 40%);
+	font-size: var(--input_font_size)
+}
+
+#wpforms-390-field_1-error,
+#wpforms-390-field_2-error,
+#wpforms-390-field_3-error,
+#wpforms-390-field_4-error,
+#wpforms-390-field_5-error,
+#wpforms-390-field_6-error {
+	position: absolute;
+	font-size: 12px;
+	color: #A90909;
+}
+
+#wpforms-390 .wpforms-field-container {
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden
+}
+#wpforms-390 .wpforms-submit-container {
+	width: 2rem;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+#wpforms-390 .wpforms-submit-container button {
+	width: 100%;
+	height: .46rem;
+	font-size: .18rem;
+	color: #FFF;
+	line-height: .46rem;
+	background: var(--i_color);
+	cursor: pointer;
+	position: relative;
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+	z-index: 2
+}
+#wpforms-390 .wpforms-submit-container button:hover {
+	background: #071642;
+}
+#wpforms-390 .wpforms-submit-container img {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 4px
+}
+
+@media screen and (max-width:1440px) {
+	.c_form .tit {
+		font-size: 0.26rem;
+	}
+}
+@media screen and (max-width:1024px) {
+	.c_form .tit {
+		font-size: 0.22rem;
+	}
+
+	#wpforms-390 .wpforms-field-label {
+		font-size: 0.16rem;
+	}
+	#wpforms-390 .wpforms-field {
+		padding-bottom: 0.18rem;
+	}
+}
+@media screen and (max-width:768px) {
+	.c_form .tit {
+		font-size: 0.18rem;
+	}
+
+	#wpforms-390 .wpforms-field-label {
+		font-size: 0.15rem;
+	}
+}
+@media screen and (max-width:560px) {
+	.c_form .wrap {
+		padding: 0 0;
+	}
+
+	#wpforms-390 {
+		--input_font_size: 14px;
+		--input_height: .4rem
+	}
+	#wpforms-390 .wpforms-submit-container {
+		width: 1.8rem;
+	}
+	#wpforms-390 .wpforms-submit-container button {
+		font-size: 0.15rem;
+		height: 0.4rem;
+		line-height: 0.4rem;
+	}
+}
+
+
+
+
+
+
+
+
+.abc {}
