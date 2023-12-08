@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport">
+<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<title>jiaqu</title>
+<script src="static/js/rem.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="static/css/animate.min.css" rel="stylesheet" type="text/css" />
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/swiper.min.js"></script>
+<script src="static/js/swiper.animate.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+<!-- header -->
+<header>
+	<div class="top wrap_top">
+		
+		<!-- logo -->
+		<div class="logo"><a href="index.html"><img src="static/imgs/logo.png" /></a></div>
+	
+		<!-- 导航 -->
+		<ul class="i_nav">
+			<li class="menu-item current-menu-item">
+				<a href="index.html">HOME</a>
+			</li>
+			<li class="menu-item menu-item-has-children">
+				<a href="about_profile.html">ABOUT US</a>
+				<!-- <ul class="sub-menu">
+					<li class="menu-item"><a href="about_profile.html">Company Profile</a></li>
+					<li class="menu-item"><a href="about_advantage.html">Advantage & Mileage</a></li>
+					<li class="menu-item"><a href="about_displays.html">Certificates & Displays</a></li>
+				</ul> -->
+			</li>
+			<li class="menu-item menu-item-has-children nav_products">
+				<a href="products.html">PRODUCTS</a>
+				<ul class="sub-menu">
+					<li class="menu-item"><a href="#">Bathtub</a></li>
+					<li class="menu-item"><a href="#">Pedestal washbasin</a></li>
+					<li class="menu-item"><a href="#">Basin</a></li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a href="stone_resin.html">Recruit dealers</a>
+			</li>
+			
+			<li class="menu-item">
+				<a href="news.html">BLOG</a>
+			</li>
+			<li class="menu-item">
+				<a href="contact.html">CONTACT US</a>
+			</li>
+		</ul>
+		
+		<!-- pc端导航下拉 -->
+		<div class="nav_list_show nav_products_show">
+			<div class="nav_list_box">
+				<ul>
+					<li>
+						<a href="#">Bathtub</a>
+						<div class="img"><img src="static/images/nav_products_ico1.png" /></div>
+						<dl>
+							<dt><a href="#">Freestanding tub</a></dt>
+							<dt><a href="#">Build-in tub</a></dt>
+						</dl>
+					</li>
+					<li>
+						<a href="#">Pedestal washbasin</a>
+						<div class="img"><img src="static/images/nav_products_ico2.png" /></div>
+						<dl>
+							<dt><a href="#">Round</a></dt>
+							<dt><a href="#">Square</a></dt>
+							<dt><a href="#">Special-shaped</a></dt>
+						</dl>
+					</li>
+					<li>
+						<a href="#">Basin</a>
+						<div class="img"><img src="static/images/nav_products_ico3.png" /></div>
+						<dl>
+							<dt><a href="#">Countertop Basin</a></dt>
+							<dt><a href="#">Vanity Basin</a></dt>
+							<dt><a href="#">Wall hang Basin</a></dt>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div class="top_r">
+			
+			<!-- 语言切换 -->
+			<ul class="top_language">
+				<i></i> <h1>language</h1>
+				<li class="menu-item menu-item-has-children">
+					<ul class="sub-menu">
+						<li class="menu-item">
+							<a href="#">
+								<span data-no-translation>
+									<img class="trp-flag-image" src="http://lj102.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/zh_CN.png" width="18" height="12" alt="zh_CN" title="Chinese">
+									<span class="trp-ls-language-name">ZH_CN</span>
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="http://lj102.com/as/">
+								<span data-no-translation>
+									<img class="trp-flag-image" src="http://lj102.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/as.png" width="18" height="12" alt="as" title="Assamese">
+									<span class="trp-ls-language-name">AS</span>
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="http://lj102.com/ar/">
+								<span data-no-translation>
+									<img class="trp-flag-image" src="http://lj102.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/ar.png" width="18" height="12" alt="ar" title="Arabic">
+									<span class="trp-ls-language-name">AR</span>
+								</span>
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="http://lj102.com/en/">
+								<span data-no-translation>
+									<img class="trp-flag-image" src="http://lj102.com/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png" width="18" height="12" alt="en_US" title="English">
+									<span class="trp-ls-language-name">EN</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<!-- 搜索 -->
+			<div class="top_search_ico"><i></i></div>
+			<div class="top_search">
+				<form role="search" method="get" id="searchform" action="/"> 
+					<input class="top_search_ipt" type="text" placeholder="Search" value="" name="s" id="s">
+					<input class="top_search_btn" type="submit" id="searchsubmit" value="search">
+				</form>
+			</div>
+			
+		</div>
+		
+		<!-- 移动端导航按钮 -->
+		<div class="nav_menu"><i></i></div>
+		
+	</div>
+</header>
+<script src="static/js/header.js"></script>
+<div class="clear"></div>
+
+
+<!-- banner -->
+<div class="about_banner">
+    <img class="about_img" src="static/imgs/about_banner.jpg" alt="">
+    <div class="about_moban">
+        <svg class="nectar-shape-divider" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">  
+            <path d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path> <path d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path> <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
+        </svg>
+    </div>
+    <div class="about_banner_text">
+        <h1>about us</h1>
+        <!-- 当前位置 -->
+        <div class="in_position wow slideInUp">
+            <div class="container">
+                <a href="index.html">HOME</a>
+                <a href="#">about us</a>
+                <a href="#">Certificates & Displays</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- main -->
+<main>
+    <!-- about -->
+	<div class="about_area">
+         <h1>Our introduction</h1>
+         <h2>Come into us and get to know us</h2>
+         <p>Jiayu Electric has been established for 12 years. Now it has a modern workshop covering an area of 8,000 square meters, 200 workers, 50 fully automatic equipment and hundreds of sets of molds. It can produce 10,000 meat grinders per day Customers all over the world produce meat grinders in large quantities. We have a professional R&D and design team, and can also develop unique products for customers. Jiayu's business philosophy is committed to providing customers with the highest quality products and the most comprehensive and professional services.</p>
+         <!-- 箭头 -->
+         <a href="#about_qie">
+            <div class="arrows-body">
+                <div class="arrow"></div>
+                <div class="arrow"></div>  
+            </div>
+         </a>
+    </div> 
+    <!-- about 切换 -->
+    <div class="about_qie" id="about_qie">
+         <img src="static/imgs/logo_about.png" alt="">
+         <h1>About us</h1>
+         <h2>committed to providing customers with the highest quality products and the most comprehensive and professional services.</h2>
+         <ul class="about_qie_ul" id="tab_tit4">
+             <li>
+                  <img src="static/imgs/about1.png" alt="">
+                  <p>video</p>
+             </li>
+             <li>
+                  <img src="static/imgs/about2.png" alt="">
+                  <p>history</p>
+             </li>
+             <li>
+                <img src="static/imgs/about3.png" alt="">
+                <p>certificate</p>
+            </li>
+         </ul>
+    </div>
+    <!-- 切换内容 -->
+    <div class="about_qie_area" id="tab_cont4">
+        <!-- 视频 -->
+        <div class="sublist">
+            <div class="wrap_70 about_qie_video">
+                <video data-autoplay  controls src="static/videos/about.mp4" muted="" class="pc-video"  webkit-playsinline="true" x-webkit-airplay="true" x5-playsinline="true" playsinline="true" poster=""></video>
+            </div>
+        </div>
+        <!-- 历史进程 -->
+        <div class="sublist">
+              <!-- 历史进程 -->
+            <!-- Certificate -->
+            <div class="in_certificate box_mg about_our">
+                <!-- <div class="i_tit wow slideInUp"><h2>Certificate</h2></div> -->
+                <div class="in_zs ">
+                    <div class="in_zs_list wrap_84 swiper-container">
+                        <ul class="swiper-wrapper" id="zs_list">
+                            <li class="swiper-slide">
+                                <div class="img about_swiper_img" id="demo">
+                                    <div class="in_zs_img"><img src="static/imgs/history.jpg" /></div>
+                                    <div class="about_our_text">
+                                        <h1>Hurom was founded om was founded as a kitchen om was founded as a kitchen om was founded as a kitchen as a kitchen appliance company.</h1>
+                                        <p>An entrepreneur and an An entrepreneur and an innovator, Hurom's founder had a mission in mind to promote healthy lifestyles by making appliances that help</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                <i id="demoi">2022</i>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img about_swiper_img" id="demo">
+                                    <div class="in_zs_img"><img src="static/imgs/b1.jpg" /></div>
+                                    <div class="about_our_text">
+                                        <h1>Hurom was founded as a kitchen appliance company.</h1>
+                                        <p>An entrepreneur and an An entrepreneur an</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                <i id="demoi">2022</i>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img about_swiper_img" id="demo">
+                                    <div class="in_zs_img"><img src="static/imgs/history.jpg" /></div>
+                                    <div class="about_our_text">
+                                        <h1>Hurom was founded as a kitchen appliance company.</h1>
+                                        <p>An entrepreneur and an An entrepreneur and an innovator, Hurom's founder had a mission in mind to promote healthy lifestyles by making appliances that help</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                <i id="demoi">2022</i>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img about_swiper_img" id="demo">
+                                    <div class="in_zs_img"><img src="static/imgs/history.jpg" /></div>
+                                    <div class="about_our_text">
+                                        <h1>Hurom was founded as a kitchen appliance company.</h1>
+                                        <p>An entrepreneur and an An entrepreneur and an innovator, Hurom's founder had a mission in mind to promote healthy lifestyles by making appliances that help</p>
+                                    </div>
+                                
+                                </div>
+                                
+                                <i id="demoi">2022</i>
+                            </li>
+                        </ul>	
+                    </div>
+                    <div class="zs-pagination"></div>
+                    <!-- <div class="zs-button-next"></div>
+                    <div class="zs-button-prev"></div> -->
+                    <!-- 点 -->
+                    
+                    
+                </div>
+            </div>
+    
+        </div>
+        <!-- 证书 -->
+        <div class="sublist wrap_65">
+             <!-- 证书 -->
+            <div class="g_partner_box box_mg ">
+                <div class="g_partner">
+                    <div class="g_partner_list swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="img"><img src="static/imgs/zs.jpg" /></div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img"><img src="static/imgs/zs.jpg" /></div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img"><img src="static/imgs/zs.jpg" /></div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="img"><img src="static/imgs/zs.jpg" /></div>
+                            </li>
+                        </ul>				
+                    </div>
+                    <div class="pt-pagination"></div>
+                    <div class="pt-button-next"></div>
+                    <div class="pt-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var zsswiper = new Swiper('.in_zs_list', {
+            // loop: true,
+            navigation: {
+                nextEl: '.zs-button-next',
+                prevEl: '.zs-button-prev',
+            },
+            pagination: {
+                el: '.zs-pagination',
+                clickable: true,
+            },
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            // },
+            roundLengths: true, //防止文字模糊
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+                0: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                slidesPerGroup: 1
+                },
+                768: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+                slidesPerGroup: 1
+                },
+                1200: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+                slidesPerGroup: 1
+                }
+            }
+        });
+        var div1 = document.getElementById('demo').offsetHeight;
+        var div2 = document.getElementById('demoi').offsetHeight;
+        var sum = (div1 * 2) + div2;
+        console.log(sum);
+        $('.in_zs_list .swiper-wrapper').css('height','calc('+ sum +'px + var(--m_margin) * 2)')
+      
+    </script>
+    <script>
+        // 证书
+        var pswiper = new Swiper('.g_partner_list', {
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.pt-button-next',
+                prevEl: '.pt-button-prev',
+            },
+            pagination: {
+                el: '.pt-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+                0: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                slidesPerGroup: 2
+                },
+                768: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                slidesPerGroup: 4
+                },
+                1200: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                slidesPerGroup: 1
+                }
+            }
+        });
+
+    </script>
+	<script src="static/js/jquery.tabso_yeso.js"></script>
+	<script>
+		$("#tab_tit4").tabso({
+			cntSelect:"#tab_cont4",
+			tabEvent:"click",
+			tabStyle:"fade"
+		});
+        
+	</script>
+</main>
+<link href="static/css/viewer.min.css" rel="stylesheet" type="text/css" />
+<script src="static/js/viewer.min.js"></script>
+<script src="static/js/jquery.tabso_yeso.js"></script>
+<script src="static/js/index.js"></script>
+<script src="static/js/roll-num.js"></script>
+<script>$('.roll_num').countUp();</script>
+
+
+<!-- footer -->
+<footer>
+	<!-- 底部上 -->
+       <div class="footer_top">
+			<ul class="wrap_84 footer_top_ul">
+                <li>
+					<img src="static/imgs/footer-1.png" alt="">
+					<div class="footer_top_text">
+						<h1>FREE SHIPPING</h1>
+						<h2>Promise to deliver within 24 hours</h2>
+					</div>
+				</li>
+				<li>
+					<img src="static/imgs/footer-2.png" alt="">
+					<div class="footer_top_text">
+						<h1>quality assurance</h1>
+						<h2>Keep improving and casting product quality</h2>
+					</div>
+				</li>
+				<li>
+					<img src="static/imgs/footer-3.png" alt="">
+					<div class="footer_top_text">
+						<h1>Real time online</h1>
+						<h2>We are online 24 hours a day</h2>
+					</div>
+				</li>
+			</ul> 
+	   </div>
+	<!-- 底部中 -->
+	<div class="footer_center">
+         <div class="wrap_84 footer_center_txt">
+               <img class="footer_center_img" src="static/imgs/logo.jpg" alt="">
+			   <h1>Focus on household kitchen appliances for twelve years, committed to product <br> development, OEM, export and other services.</h1>
+			   <div class="footer_center_icon">
+                    <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+					<a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+					<a href=""><ion-icon name="logo-ionic"></ion-icon></a>
+					<a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+					<a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+			   </div>
+		 </div>
+	</div>
+	<!-- 底部下 -->
+	<div class="footer_bot">
+         <ul class="wrap_84 footer_bot_ul">
+			 <li><a href="">HOME</a></li>
+			 <li><a href="">about us</a></li>
+			 <li><a href="">PRODUCTS</a></li>
+			 <li><a href="">Recruit dealers</a></li>
+			 <li><a href="">blog</a></li>
+			 <li><a href="">CONTACT US</a></li>
+		 </ul>
+	</div>
+	<div class="wrap_84 footer_white">
+         <div class="footer_white_left">
+			 <p>© 2022 TOP METAL MANUFACTURE. <a href="">Design by LJGLOBAL.</a>   <a href="">Privacy Policy</a></p>
+		 </div>
+		 <div class="footer_white_right">
+			 <a href="" class="footer_white_right1">
+				 <i></i>
+				 <p>+86 17355200222</p>
+				 <div></div>
+			 </a>
+			 <a href="" class="footer_white_right2">
+				<i></i>
+				<p>Offical@jy-appliance.com</p>
+			</a>
+		 </div>
+	</div>
+</footer>
+
+<!-- 引入wow动画效果 -->
+<script src="static/js/wow.min.js"></script>
+<script>
+	wow = new WOW({
+        animateClass: 'animated',
+        offset: 100,
+		mobile: false,
+	});
+    wow.init();
+</script>
+
+</body>
+</html>
+

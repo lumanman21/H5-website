@@ -1,0 +1,4 @@
+<svg class="fp-arc-loader" width="50" height="50" viewBox="0 0 50 50">
+    <circle class="arc" cx="28" cy="28" r="20" fill="none" stroke-dasharray="0, 0" stroke-dashoffset="5" transform="rotate(-285 28 28)" stroke="#e60012" stroke-opacity="1" stroke-width="4px" style="stroke-dashoffset:157.8644px; stroke-dasharray: 125.6px, 157.8575px;">
+    </circle>
+</svg>
